@@ -1,0 +1,47 @@
+query get_my_profile{
+  myProfile{
+    _id,
+    firstname
+    lastname,
+    quotes{
+    name,
+    by
+  }
+}
+    
+}
+  
+
+
+
+
+
+{
+  "authorization":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI1Zjk0YzdjZWQ2N2FhMWM0ZWNlNGIiLCJpYXQiOjE3NDc4MjE5NDEsImV4cCI6MTc0NzgyNTU0MX0.nCwZTyr0C3iNOI7As4_dRbWPEuL9m3bWMFWORKL6rko"
+}
+
+
+-------------------------------------------------------------------
+
+# Write your query or mutation here
+
+mutation loginUser($userSignIn:loginUserInput!){
+  loginUser(userSignIn:$userSignIn){
+    token
+  }
+  
+}
+
+
+
+{
+  "userSignIn":{
+      "email":"mukeshambani123@gmail.com",
+      "password":"mukesh" 
+  }
+
+}
+
+
+
+-------------------------------------------------------------------
